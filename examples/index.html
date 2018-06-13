@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Review</title>
+
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: [inicio] minmax(320px, 500px) [medio] minmax(320px, 500px) [final];
+      justify-content: center;
+      padding: 16px;
+
+    }
+    .item {
+      /*background: lightblue;*/
+      padding: 16px;
+      border: 2px blue solid;
+    }
+    .item:nth-of-type(1) {
+      grid-column: inicio / final;
+      background: red;
+    }
+    .item:nth-of-type(2) {
+      background: yellow;
+    }
+    .item:nth-of-type(3) {
+      background: orange;
+    }
+    .item:nth-of-type(4) {
+      grid-column: inicio / final;
+      background: peru;
+    }
+    @media (max-width: 680px) {
+      .container {
+        grid-template-columns: [inicio] minmax(320px, 600px) [final];
+        padding-top: 0px;
+        padding-bottom: 0px;
+      }
+      .item {
+        grid-column: inicio / final;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item header">
+      Lorem ipsum dolor sit amet
+    </div>
+    <div class="item left">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div class="item right">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+    <div class="item footer">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua.
+    </div>
+  </div>
+</body>
+</html>
